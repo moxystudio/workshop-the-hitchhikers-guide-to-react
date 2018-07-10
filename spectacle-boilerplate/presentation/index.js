@@ -14,10 +14,17 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
+// Import image preloader util
+import preloader from "spectacle/lib/utils/preloader";
+
+import images from './getImages';
+preloader(images);
+
+
 // Import slides
 import Cover from "./slides/Cover"
 import HelloWorld from "./slides/HelloWorld";
-import Coding from "./slides/Coding";
+import Intro from "./slides/Intro";
 
 
 // Require CSS
@@ -27,7 +34,8 @@ const theme = createTheme({
     primary: "white",
     secondary: "#2932d3",
     tertiary: "#03A9FC",
-    quarternary: "#CECECE"
+    quarternary: "#f54e50"
+
 }, {
     primary: "Montserrat",
     secondary: "Helvetica"
@@ -47,8 +55,31 @@ export default class Presentation extends React.Component {
                     <HelloWorld.Desc />
                 </Slide>
                 <Slide transition={["zoom"]} bgColor="primary">
-                    <Coding />
+                    <Intro.Title />
                 </Slide>
+            <Slide transition={["slide"]} bgImage={images.timeMachine.replace("/", "")} bgDarken={0.75}>
+                    <Intro.TimeTravel />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Intro.Before />
+                </Slide>
+                <Slide transition={["spin"]} bgImage={ images.newPlayers} >
+                    <Intro.Now />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Intro.Now2 />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Intro.Title color="primary"/>
+                </Slide>
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Intro.QuickWins />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Intro.QuickWins2 img={ images.diff} />
+                </Slide>
+
             </Deck>
         );
     }
