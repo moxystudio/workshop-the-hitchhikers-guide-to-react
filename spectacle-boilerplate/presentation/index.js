@@ -28,6 +28,7 @@ import Intro from "./slides/Intro";
 import Props from "./slides/Props";
 import Styling from "./slides/Styling";
 import Patterns from "./slides/Patterns";
+import Storybook from "./slides/Storybook";
 
 
 // Require CSS
@@ -160,6 +161,17 @@ export default class Presentation extends React.Component {
                 <Slide transition={["fade"]} bgColor="primary">
                     <Patterns.Patterns3 />
                 </Slide>
+
+                { /* Composing */ }
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Storybook.Title />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Storybook.Main />
+                </Slide>
+
             </Deck>
         );
     }
