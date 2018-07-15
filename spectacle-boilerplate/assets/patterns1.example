@@ -1,0 +1,6 @@
+function isMobile(window) {
+    // we could do many other things here, or use a mobile 
+    // detection library
+    return window.innerWidth <= 768;
+}
+

@@ -27,6 +27,7 @@ import HelloWorld from "./slides/HelloWorld";
 import Intro from "./slides/Intro";
 import Props from "./slides/Props";
 import Styling from "./slides/Styling";
+import Patterns from "./slides/Patterns";
 
 
 // Require CSS
@@ -140,6 +141,25 @@ export default class Presentation extends React.Component {
                     <Styling.PlainCss />
                 </Slide>
 
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Styling.CssModules />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Patterns.Title />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Patterns.Patterns1 />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Patterns.Patterns2 />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Patterns.Patterns3 />
+                </Slide>
             </Deck>
         );
     }

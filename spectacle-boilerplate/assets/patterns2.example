@@ -1,0 +1,11 @@
+const withIsMobile = (WrappedComp) => {
+  return class HOC extends Component {
+    render() {
+      return (
+        <WrappedComp 
+          isMobile={ isMobile(window) } 
+          { ...this.props } />
+      );
+    }
+  }
+}

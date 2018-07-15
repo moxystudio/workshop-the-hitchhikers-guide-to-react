@@ -1,10 +1,10 @@
+import styles from './MyComponent.css';
 import classnames from 'classnames';
-import './MyComponent.css';
 
 const MyComponent extends React.Component {
   render() {
     const { className } = this.props;
-    const myClassName = classnames('main', 'wrapper', className);
+    const myClassName = classnames(styles.main, styles.wrapper, className);
 
     return (
         <div className={ myClassName }>
