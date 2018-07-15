@@ -3,11 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-    Appear,
     Deck,
-    Heading,
-    Layout,
-    Text,
     Slide
 } from "spectacle";
 
@@ -20,16 +16,18 @@ import preloader from "spectacle/lib/utils/preloader";
 import images from './getImages';
 preloader(images);
 
-
 // Import slides
 import Cover from "./slides/Cover"
 import HelloWorld from "./slides/HelloWorld";
 import Intro from "./slides/Intro";
+import State from "./slides/State";
 import Props from "./slides/Props";
+import Composing from "./slides/Composing";
 import Styling from "./slides/Styling";
 import Patterns from "./slides/Patterns";
 import Storybook from "./slides/Storybook";
-
+import Testing from "./slides/Testing";
+import Coding from "./slides/Coding";
 
 // Require CSS
 require("normalize.css");
@@ -52,12 +50,9 @@ export default class Presentation extends React.Component {
                 <Slide transition={["zoom"]} bgColor="primary">
                     <Cover />
                 </Slide>
-                <Slide bgColor="primary">
-                    <HelloWorld.Intro />
-                </Slide>
-                <Slide bgColor="primary">
-                    <HelloWorld.Desc />
-                </Slide>
+
+                { /* Intro */}
+
                 <Slide transition={["zoom"]} bgColor="primary">
                     <Intro.Title />
                 </Slide>
@@ -67,14 +62,14 @@ export default class Presentation extends React.Component {
                 <Slide transition={["slide"]} bgColor="primary">
                     <Intro.Before />
                 </Slide>
-                <Slide transition={["spin"]} bgImage={ images.newPlayers} >
+                <Slide transition={["spin"]} bgImage={images.newPlayers} >
                     <Intro.Now />
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Intro.Now2 />
                 </Slide>
                 <Slide transition={["slide"]} bgColor="secondary">
-                    <Intro.Title color="primary"/>
+                    <Intro.Title color="primary" />
                 </Slide>
 
                 <Slide transition={["fade"]} bgColor="primary">
@@ -86,18 +81,45 @@ export default class Presentation extends React.Component {
                 </Slide>
 
                 <Slide transition={["fade"]} bgColor="primary">
-                    <Intro.QuickWins2 img={ images.diff} />
+                    <Intro.QuickWins2 img={images.diff} />
                 </Slide>
 
                 <Slide transition={["fade"]} bgColor="primary">
                     <Intro.OtherWins />
                 </Slide>
-                
+
                 <Slide transition={["fade"]} bgColor="primary">
                     <Intro.JustFn />
                 </Slide>
 
-                { /* Props */ }
+                { /* Hello world */}
+
+                <Slide transition={["spin"]} bgImage={images.world.replace("/", "")} bgDarken={0.75}>
+                    <HelloWorld.Intro />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <HelloWorld.Example01 />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <HelloWorld.Example02 />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <HelloWorld.Example03 />
+                </Slide>
+
+                { /* State */}
+
+                <Slide transition={["spin"]} bgColor="primary">
+                    <State.Intro />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <State.Example01 />
+                </Slide>
+                <Slide transition={["fade"]} bgColor="primary">
+                    <State.Details />
+                </Slide>
+
+                { /* Props */}
 
                 <Slide transition={["fade"]} bgColor="primary">
                     <Props.Title />
@@ -131,9 +153,23 @@ export default class Presentation extends React.Component {
                     <Props.PropValidation2 />
                 </Slide>
 
-                { /* Composing */ }
+                { /* Composing */}
+
+                <Slide bgColor="spin" bgImage={images.puzzle.replace("/", "")} bgDarken={0.75}>
+                    <Composing.Intro />
+                </Slide>
+                <Slide bgColor="primary">
+                    <Composing.Description />
+                </Slide>
+                <Slide bgColor="primary">
+                    <Composing.Example01 />
+                </Slide>
+                <Slide bgColor="primary">
+                    <Composing.Example02 />
+                </Slide>
 
                 { /* Styling Options */ }
+
                 <Slide transition={["fade"]} bgColor="primary">
                     <Styling.Title />
                 </Slide>
@@ -174,7 +210,7 @@ export default class Presentation extends React.Component {
                     <Patterns.Patterns6 />
                 </Slide>
 
-                { /* Composing */ }
+                { /* Storybook */ }
 
                 <Slide transition={["fade"]} bgColor="primary">
                     <Storybook.Title />
@@ -184,6 +220,15 @@ export default class Presentation extends React.Component {
                     <Storybook.Main />
                 </Slide>
 
+                { /* Testing */}
+
+                <Slide bgColor="primary">
+                    <Testing.Listing />
+                </Slide>
+
+                <Slide bgColor="primary">
+                    <Coding />
+                </Slide>
             </Deck>
         );
     }

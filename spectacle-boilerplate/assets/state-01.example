@@ -1,0 +1,29 @@
+import React, { Component } from 'react';
+
+class StateComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            letter: 1,
+        };
+        this.handleOnEnter = this.handleOnEnter.bind(this);
+    }
+
+    handleOnEnter() {
+        this.setState(({ letter }) => ({
+            letter: letter + 1,
+        }));
+    }
+
+    render () {
+        const { letter } = this.state;
+
+        return (
+            <div onMouseEnter={ this.handleOnEnter }>
+                { 'MAD_SHCOOL'.substring(0, letter) }
+            </div>
+        );
+    }
+};
+
+export default StateComponent;
