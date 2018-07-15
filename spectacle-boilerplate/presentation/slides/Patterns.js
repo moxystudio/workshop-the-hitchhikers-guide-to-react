@@ -72,10 +72,56 @@ const Patterns3 = () => (
     </div>
 );
 
+const Patterns4 = () => (
+    <div>
+        <Heading size={2} textColor="secondary">
+						Render Props
+        </Heading>
+        <Appear>
+            <Text margin="40">
+								Instead of passing JSX as a component's children, we can pass a function that's executed with the desired parameters.
+            </Text>
+        </Appear>
+    </div>
+);
+
+const Patterns5 = () => (
+    <div>
+        <Appear>
+        <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../assets/patterns1.example")}
+            textSize="22px"
+            margin="20px 0" />
+        </Appear>
+        <Appear>
+        <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../assets/patterns3.example")}
+            textSize="22px"
+            margin="20px 0" />
+        </Appear>
+    </div>
+);
+
+const Patterns6 = () => (
+    <div>
+				<Appear>
+        <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../assets/patterns4.example")}
+            textSize="22px"
+            margin="20px 0" />
+        </Appear>
+    </div>
+);
 
 export default {
     Title,
     Patterns1,
     Patterns2,
     Patterns3,
+    Patterns4,
+    Patterns5,
+    Patterns6,
 };

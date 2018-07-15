@@ -162,6 +162,18 @@ export default class Presentation extends React.Component {
                     <Patterns.Patterns3 />
                 </Slide>
 
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Patterns.Patterns4 />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Patterns.Patterns5 />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Patterns.Patterns6 />
+                </Slide>
+
                 { /* Composing */ }
 
                 <Slide transition={["fade"]} bgColor="primary">
