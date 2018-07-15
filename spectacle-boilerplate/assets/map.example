@@ -1,0 +1,10 @@
+import ListItem from './ListItem';
+...
+render() {
+    return (
+        <ul>
+            { items.map(item => 
+                <ListItem key={ item.id } item={ item }/> ) }
+        </ul>
+   );
+}

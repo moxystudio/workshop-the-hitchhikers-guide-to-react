@@ -1,6 +1,8 @@
 import React from "react";
 import {
   Link,
+  Code,
+  CodePane,
   S,
   Slide,
   Text,
@@ -59,7 +61,7 @@ const Before = () => (
         </Appear>
         <Appear>
             <Text fit lineHeight={1.5} textColor="secondary" >
-                Add a bunch of <S type="bold">JavaScript files</S>!
+                Add a bunch of <S type="bold">JavaScript files</S>
             </Text>
         </Appear>
     </div>
@@ -136,6 +138,13 @@ const QuickWins = () => (
                 </Text>
             </div>
         </Appear>
+        <Appear>
+            <div>
+                <Text textSize={30} textColor="secondary" margin={ 20 } lineHeight={1.4}>
+                    ✔ Understanding how react works -> React Native becomes a lot easier
+                </Text>
+            </div>
+        </Appear>
     </div>
 );
 
@@ -144,9 +153,6 @@ const QuickWins2 = (props) => (
         <Heading size={2} lineHeight={2} textColor="secondary" textAlign="center">
             ⚡ Wins
         </Heading>
-        <Text textSize={30} textColor="secondary" margin={ 20 } lineHeight={1.4}>
-            ✔ Understanding how react works -> React Native becomes a lot easier
-        </Text>
         <Appear>
             <div style={{padding: '20px'}}>
                 <Text textSize={30} textColor="secondary" margin={ 20 } lineHeight={1.4}>
@@ -158,6 +164,55 @@ const QuickWins2 = (props) => (
     </div>
 );
 
+const QuickWins0 = () => (
+    <div>
+        <Heading size={2} lineHeight={2} textColor="secondary" textAlign="center">
+            ⚡ Wins
+        </Heading>
+        <Appear>
+            <div>
+                <Text lineHeight={1.4} textColor="other">
+                    JSX is cool 😎
+                </Text>
+                <CodePane
+                    lang="jsx"
+                    source={require("raw-loader!../../assets/map.example")}
+                    textSize="22px"
+                    margin="20px 0" />
+            </div>
+        </Appear>
+    </div>
+);
+
+const OtherWins = () => (
+    <div>
+        <Heading size={2} lineHeight={2} textColor="secondary" textAlign="center">
+            ⚡ Wins
+        </Heading>
+        <Text textSize={30} textColor="secondary" margin={ 20 } lineHeight={1.4}>
+            ✔ It's a library for building UI, not a framework
+        </Text>
+        <Text textSize={30} textColor="secondary" margin={ 20 } lineHeight={1.4}>
+            ✔ Server Side Rendering
+        </Text>
+        <Appear>
+            <Text textSize={30} textColor="secondary">
+                Plus...
+            </Text>
+        </Appear>
+    </div>
+)
+
+const JustFn = () => (
+    <div>
+        <Heading size={1} caps fit lineHeight={2} textColor="secondary">
+            It's just functions
+        </Heading>
+        <Appear>
+            <Code>(props) => markup || more functions</Code>
+        </Appear>
+    </div>
+)
 
 export default {
     Title,
@@ -165,6 +220,9 @@ export default {
     Before,
     Now,
     Now2,
+    QuickWins0,
     QuickWins,
-    QuickWins2
+    QuickWins2,
+    OtherWins,
+    JustFn,
 };

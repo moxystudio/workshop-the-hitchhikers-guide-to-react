@@ -1,0 +1,9 @@
+// More prop types (Booleans, strings, etc)
+import Banner from '...';
+...
+
+return (
+    <Banner
+        isFeatured={ false }
+        className="my-class-name" />
+);

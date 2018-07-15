@@ -1,0 +1,10 @@
+// Callbacks as props
+import Banner from '...';
+...
+
+return (
+    <Banner
+        onClick={ ... }
+        onAnimationFinish={ ... }
+    />
+);

@@ -1,0 +1,10 @@
+// JSX as children
+import Banner from '...';
+import Button from '...';
+...
+
+return (
+    <Banner>
+        <Button />
+    </Banner>
+);

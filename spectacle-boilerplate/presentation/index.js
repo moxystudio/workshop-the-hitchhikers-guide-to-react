@@ -25,6 +25,8 @@ preloader(images);
 import Cover from "./slides/Cover"
 import HelloWorld from "./slides/HelloWorld";
 import Intro from "./slides/Intro";
+import Props from "./slides/Props";
+import Styling from "./slides/Styling";
 
 
 // Require CSS
@@ -57,7 +59,7 @@ export default class Presentation extends React.Component {
                 <Slide transition={["zoom"]} bgColor="primary">
                     <Intro.Title />
                 </Slide>
-            <Slide transition={["slide"]} bgImage={images.timeMachine.replace("/", "")} bgDarken={0.75}>
+                <Slide transition={["slide"]} bgImage={images.timeMachine.replace("/", "")} bgDarken={0.75}>
                     <Intro.TimeTravel />
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
@@ -72,12 +74,70 @@ export default class Presentation extends React.Component {
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Intro.Title color="primary"/>
                 </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Intro.QuickWins0 />
+                </Slide>
+
                 <Slide transition={["fade"]} bgColor="primary">
                     <Intro.QuickWins />
                 </Slide>
 
                 <Slide transition={["fade"]} bgColor="primary">
                     <Intro.QuickWins2 img={ images.diff} />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Intro.OtherWins />
+                </Slide>
+                
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Intro.JustFn />
+                </Slide>
+
+                { /* Props */ }
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Props.Title />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Props.Api />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Props.Code1 />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Props.Code2 />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Props.Code3 />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Props.Code4 />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Props.PropValidation />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Props.PropValidation2 />
+                </Slide>
+
+                { /* Composing */ }
+
+                { /* Styling Options */ }
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Styling.Title />
+                </Slide>
+
+                <Slide transition={["fade"]} bgColor="primary">
+                    <Styling.PlainCss />
                 </Slide>
 
             </Deck>

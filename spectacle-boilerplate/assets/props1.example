@@ -1,0 +1,9 @@
+// No props at all
+import Banner from '...';
+...
+
+return (
+    <div>
+        <Banner />
+    </div>
+);

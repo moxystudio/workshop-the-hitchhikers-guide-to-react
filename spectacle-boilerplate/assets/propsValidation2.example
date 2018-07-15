@@ -1,0 +1,14 @@
+import PropTypes from 'prop-types';
+
+// ...
+
+Banner.propTypes = {
+    isFeatured: PropTypes.bool,
+    label: PropTypes.label,
+    onClick: PropTypes.func.isRequired,
+    theme: PropTypes.oneOf('positive', 'negative'),
+}; 
+
+Banner.defaultProps = {
+    label: 'Default Label'
+};

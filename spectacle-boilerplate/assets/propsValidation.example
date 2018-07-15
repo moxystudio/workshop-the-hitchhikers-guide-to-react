@@ -1,0 +1,14 @@
+class Banner extends React.Component {
+    render() {
+        const { isFeatured, onClick, theme, label } = this.props;
+        return (
+            <div className={ isFeatured ? 'featured banner' : 'banner' }>
+                { label }
+                <button className={ theme === 'negative' ? 'negative btn' : 'btn' } onClick={ onClick }>
+                    click me
+                </button>
+            </div>
+        );
+    }
+}
+
