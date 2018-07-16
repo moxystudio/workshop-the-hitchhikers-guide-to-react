@@ -1,0 +1,21 @@
+import React, { Component } from 'react';
+
+class HelloWorld extends Component {
+    // Updating
+    static getDerivedStateFromProps(nextProps, prevState) {}
+    shouldComponentUpdate(nextProps, nextState) {}
+    // render()
+    componentDidUpdate(prevProps, prevState) {}
+
+    // Unmounting
+    componentWillUnmount() {}
+ 
+    render () {
+        // State / Props usage
+        return (
+            <div>Hello MAD SHCOOL</div>
+        );
+    }
+};
+
+export default HelloWorld;

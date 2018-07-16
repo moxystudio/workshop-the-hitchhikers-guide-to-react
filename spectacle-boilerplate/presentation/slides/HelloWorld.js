@@ -1,59 +1,73 @@
 import React from "react";
 import {
-    List,
-    ListItem,
     Appear,
+    CodePane,
     Heading
 } from "spectacle";
 
+const Intro = () => (
+    <div>
+        <Heading size={2} lineHeight={1} caps fit textColor="quarternary">
+            &lt;Hello World /&gt;
+        </Heading>
+    </div>
+);
 
-class Intro extends React.Component {
-    render() {
-        return (
+const Example01 = () => (
+    <div>
+        <Heading size={4} lineHeight={1} textColor="quarternary" margin="40px 0">
+            Functional Component
+            </Heading>
+        <Appear>
             <div>
-                <Heading size={2} lineHeight={1} caps fit textColor="secondary">
-                Hello World
-                </Heading>
+                <CodePane
+                    lang="jsx"
+                    source={require("raw-loader!../../assets/hello-world-01.example")}
+                    textSize="1.2rem"
+                    margin="20px auto"
+                    overflow="overflow" />
             </div>
-        );
-    }
-}
+        </Appear>
+    </div>
+);
 
-class Desc extends React.Component {
-    render() {
-        return (<div>
-            <List textColor="secondary">
-                <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        TODO
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem textSize="24" margin="20px 46px">
-                        TODO
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        TODO
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        TODO
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        TODO
-                    </ListItem>
-                </Appear>
-            </List>
-        </div>);
-    }
-}
+const Example02 = () => (
+    <div>
+        <Heading size={4} lineHeight={1} textColor="quarternary" margin="40px 0">
+            Component (react@16.3.0)
+            </Heading>
+        <Appear>
+            <div>
+                <CodePane
+                    textSize="1.2rem"
+                    lang="jsx"
+                    source={require("raw-loader!../../assets/hello-world-02.example")}
+                    margin="20px auto"
+                    height="65vh"
+                    overflow="scroll" />
+            </div>
+        </Appear>
+    </div>
+);
+
+const Example03 = () => (
+    <div>
+        <Appear>
+            <div>
+                <CodePane
+                    textSize="1.2rem"
+                    lang="jsx"
+                    source={require("raw-loader!../../assets/hello-world-03.example")}
+                    margin="20px auto"
+                    overflow="overflow" />
+            </div>
+        </Appear>
+    </div>
+);
 
 export default {
     Intro,
-    Desc
+    Example01,
+    Example02,
+    Example03
 };
