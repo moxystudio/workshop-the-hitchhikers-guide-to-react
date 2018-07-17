@@ -5,7 +5,7 @@ class Banner extends Component {
     render () {
         return ( <MobileDetection>
             { (isMobile) => (
-                <div>
+                <div className={ isMobile ? 'mobile' : 'desktop' }>
                     .... 
                 </div>
             )}

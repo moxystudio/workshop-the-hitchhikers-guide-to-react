@@ -34,7 +34,7 @@ const Api = () => (
 const Code1 = () => (
     <div>
         <Heading size={4} textColor="quarternary" margin="40">
-            { `{ Prop types }`}
+            { `{ No Prop }`}
         </Heading>
     <CodePane
         lang="jsx"
@@ -47,7 +47,7 @@ const Code1 = () => (
 const Code2 = () => (
     <div>
         <Heading size={4} textColor="quarternary" margin="40">
-            { `{ Prop types }`}
+            { `{ Children prop }`}
         </Heading>
     <CodePane
         lang="jsx"
@@ -61,7 +61,7 @@ const Code2 = () => (
 const Code3 = () => (
     <div>
         <Heading size={4} textColor="quarternary" margin="40">
-            { `{ Prop types }`}
+            { `{ Callbacks as props }`}
         </Heading>
     <CodePane
         lang="jsx"
@@ -74,7 +74,7 @@ const Code3 = () => (
 const Code4 = () => (
     <div>
         <Heading size={4} textColor="quarternary" margin="40">
-            { `{ Prop types }`}
+            { `{ Primitive Prop types }`}
         </Heading>
     <CodePane
         lang="jsx"
