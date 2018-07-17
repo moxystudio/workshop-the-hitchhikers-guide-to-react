@@ -1,6 +1,7 @@
 import React from "react";
 import {
     List,
+    Link,
     ListItem,
     Appear,
     CodePane,
@@ -24,7 +25,10 @@ const Example01 = () => (
                     lang="jsx"
                     source={require("raw-loader!../../assets/state-01.example")}
                     overflow="scroll"
-                    height="75vh" />
+                    height="73vh" />
+                <Appear>
+                    <Link href="https://jsfiddle.net/n5u2wwjg/93041/" target="_blank" margin="20px">Live example</Link>
+                </Appear>
             </div>
         </Appear>
     </div>
