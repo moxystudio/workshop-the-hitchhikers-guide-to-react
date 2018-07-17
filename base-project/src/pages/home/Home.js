@@ -99,7 +99,7 @@ class Home extends Component {
 
         this.setState(({ tables, kitchen }) => ({
             tables: [
-                ...tables.splice(0, tableId),
+                ...tables.slice(0, tableId),
                 {
                     ...tables[tableId],
                     total: tables[tableId].total + (menu.find((entry) => entry.itemName === itemName).itemPrice * quantity),
@@ -108,14 +108,14 @@ class Home extends Component {
                         [itemName]: tables[tableId].order ? (tables[tableId].order[itemName] || 0) + quantity : quantity,
                     },
                 },
-                ...tables.splice(tableId + 1),
+                ...tables.slice(tableId + 1),
             ],
             kitchen: {
                 ...kitchen,
                 [tableId]: [
-                    ...kitchen[tableId].splice(0, orderId),
+                    ...kitchen[tableId].slice(0, orderId),
                     updatedOrder,
-                    ...kitchen[tableId].splice(orderId + 1),
+                    ...kitchen[tableId].slice(orderId + 1),
                 ],
             },
         }));
