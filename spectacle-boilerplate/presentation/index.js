@@ -153,22 +153,7 @@ export default class Presentation extends React.Component {
                     <Props.PropValidation2 />
                 </Slide>
 
-                { /* Composing */}
-
-                <Slide bgColor="spin" bgImage={images.puzzle.replace("/", "")} bgDarken={0.75}>
-                    <Composing.Intro />
-                </Slide>
-                <Slide bgColor="primary">
-                    <Composing.Description />
-                </Slide>
-                <Slide bgColor="primary">
-                    <Composing.Example01 />
-                </Slide>
-                <Slide bgColor="primary">
-                    <Composing.Example02 />
-                </Slide>
-
-                { /* Styling Options */ }
+                { /* Styling Options */}
 
                 <Slide transition={["fade"]} bgColor="primary">
                     <Styling.Title />
@@ -181,6 +166,26 @@ export default class Presentation extends React.Component {
                 <Slide transition={["fade"]} bgColor="primary">
                     <Styling.CssModules />
                 </Slide>
+
+                { /* Composing */}
+
+                <Slide bgColor="spin" bgImage={images.puzzle.replace("/", "")} bgDarken={0.75}>
+                    <Composing.Intro />
+                </Slide>
+                <Slide bgImage={images.app.replace("/", "")}>
+                    <Composing.App />
+                </Slide>
+                <Slide bgColor="primary">
+                    <Composing.Description />
+                </Slide>
+                <Slide bgColor="primary">
+                    <Composing.Example01 />
+                </Slide>
+                <Slide bgColor="primary">
+                    <Composing.Example02 />
+                </Slide>
+
+                { /* Pattern Options */}
 
                 <Slide bgColor="slide" bgImage={images.pattern.replace("/", "")} bgDarken={0.75}>
                     <Patterns.Title />

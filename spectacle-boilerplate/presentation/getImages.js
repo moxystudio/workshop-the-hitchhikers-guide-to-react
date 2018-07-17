@@ -7,5 +7,5 @@ export default {
   diff: require("../assets/diff.gif"),
   world: require("../assets/world.jpg"),
   puzzle: require("../assets/puzzle.jpg"),
+  app: require("../assets/app.png"),
 }
-
