@@ -15,11 +15,15 @@ const Intro = () => (
     </div>
 );
 
+const App = () => (
+    <div />
+);
+
 const Description = () => (
     <div>
         <Heading size={2} lineHeight={1} caps fit textColor="secondary">
             Restaurant Room Component
-                </Heading>
+        </Heading>
         <Appear>
             <List margin="60px 20px">
                 <ListItem textSize="24" margin="20px 0">
@@ -74,6 +78,7 @@ const Example02 = () => (
 
 export default {
     Intro,
+    App,
     Description,
     Example01,
     Example02
