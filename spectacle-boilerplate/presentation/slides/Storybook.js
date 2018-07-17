@@ -31,7 +31,7 @@ const Main = () => (
             </Link>
         </Text>
         <Text>
-            <Link targe="_blank" href="https://storybooks-official.netlify.com/?selectedKind=ui%2FSearchBox&selectedStory=with%20stories&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-pane://storybooks-official.netlify.com/?selectedKind=ui%2FSearchBox&selectedStory=with%20stories&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel">
+            <Link targe="_blank" href="https://storybooks-official.netlify.com/">
                 Example
             </Link>
         </Text>

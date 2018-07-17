@@ -47,7 +47,7 @@ export default class Presentation extends React.Component {
     render() {
         return (
             <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-                <Slide transition={["zoom"]} bgColor="primary">
+                <Slide transition={["slide"]} bgImage={images.guide.replace("/", "")} bgDarken={0.75}>
                     <Cover />
                 </Slide>
 
@@ -121,7 +121,7 @@ export default class Presentation extends React.Component {
 
                 { /* Props */}
 
-                <Slide transition={["fade"]} bgColor="primary">
+                <Slide transition={["slide"]} bgImage={images.power.replace("/", "")} bgDarken={0.75}>
                     <Props.Title />
                 </Slide>
 
@@ -182,7 +182,7 @@ export default class Presentation extends React.Component {
                     <Styling.CssModules />
                 </Slide>
 
-                <Slide transition={["fade"]} bgColor="primary">
+                <Slide bgColor="slide" bgImage={images.pattern.replace("/", "")} bgDarken={0.75}>
                     <Patterns.Title />
                 </Slide>
 

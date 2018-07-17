@@ -14,7 +14,7 @@ import {
 
 const Title = () => (
     <div>
-        <Heading size={1} caps fit lineHeight={2} textColor="secondary">
+        <Heading size={1} caps fit lineHeight={2} textColor="primary">
             Power Of Props
         </Heading>
     </div>
